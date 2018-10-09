@@ -13,7 +13,6 @@ React 16.5.2 + babel 7 + mocha + webpack 4 + flow + eslint + esdoc + live editin
 - [Getting Started](#getstart)
 - [Features](#features)
 - [Installation](#inst)
-- [Running](#run)
 - [The source code](#code)
 - [Variations](#other)
 - [Credit](#credit)
@@ -71,7 +70,7 @@ This project is using the following awesome libraries/utilities/services:
 - [babel 7](https://babeljs.io/)
 - [commitizen](http://commitizen.github.io/cz-cli)
 - [esdoc](https://esdoc.org/)
-- [eslint](https://eslint.org/)
+- [ESLint](https://eslint.org/)
 - [better-npm-run](https://github.com/benoror/better-npm-run)
 - [mocha + chai + sinon](https://mochajs.org/)
 - [npm-run-all](https://github.com/mysticatea/npm-run-all)
@@ -85,68 +84,40 @@ This project is using the following awesome libraries/utilities/services:
 via Git:
 
 ```bash
-$ git clone git://github.com/Ziv-Barber/react-boilerplate-mocha.git
+$ git clone git://github.com/{{authorGit}}/{{name}}.git
 ```
 
 <a name="code"></a>
-## The source code: ##
+## :coffee: The source code: ##
 
-- src - all the sources.
-  - types - put here all the flow type declarations.
-- test - all the tests.
-- webpack.config.js - the configuration for webpack.
-- .editorconfig - coding style for this project.
+### The project structure: ###
 
-### Scripts: ###
+- react-boilerplate-mocha/src/ - All the sources should be here.
+- react-boilerplate-mocha/src/types/ - All the flow type declarations.
+- react-boilerplate-mocha/src/components/containers/ - All the React containers.
+- react-boilerplate-mocha/src/components/presentational/ - All the React presentational components without a state.
+- react-boilerplate-mocha/test/ - All the unit tests.
+- webpack.config.js - The configuration for [webpack](https://webpack.js.org/).
+- .editorconfig - The [coding style settings](editorconfig.org) for this project.
 
-- start
-- build
-- clean
-- test
-- flow
-- lint
+### Npm scripts: ###
 
-### Tests: ###
-
-Tests (including eslint):
+When using with **yarn** then use the following syntax:
 
 ```bash
-yarn test
+$ yarn name params
 ```
 
-or:
+Or with just **npm**:
 
 ```bash
-npm test
+$ npm name params
 ```
 
-### Flow: ###
-
-Flow check (if you don't have a flow plugin in your IDE):
-
-```bash
-yarn flow
-```
-
-or:
-
-```bash
-npm flow
-```
-
-### Lint: ###
-
-Lint check (if you don't have a plugin in your IDE):
-
-```bash
-yarn lint
-```
-
-or:
-
-```bash
-npm lint
-```
+- **start** - Run the code in development mode.
+- **build** - Build the production mode.
+- **lint** - Lint :cop: using [ESLint](https://eslint.org/).
+- **flow** - [Flow](https://flow.org/) checks.
 
 <a name="other"></a>
 ## Variations: ##
